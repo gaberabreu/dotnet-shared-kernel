@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{6CC487A6-8357-4A1D-84EE-8723963AA596}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{67BB8627-94EB-4807-80DD-3D466E1ACBE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel", "src\SharedKernel\SharedKernel.csproj", "{4DEA8E08-929E-416B-9895-A5401F6A78C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharedKernel.UnitTests", "tests\SharedKernel.UnitTests\SharedKernel.UnitTests.csproj", "{360B7C4E-2A10-4AC4-B69B-DCC707758D2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4DEA8E08-929E-416B-9895-A5401F6A78C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DEA8E08-929E-416B-9895-A5401F6A78C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DEA8E08-929E-416B-9895-A5401F6A78C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DEA8E08-929E-416B-9895-A5401F6A78C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{360B7C4E-2A10-4AC4-B69B-DCC707758D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{360B7C4E-2A10-4AC4-B69B-DCC707758D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{360B7C4E-2A10-4AC4-B69B-DCC707758D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{360B7C4E-2A10-4AC4-B69B-DCC707758D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{4DEA8E08-929E-416B-9895-A5401F6A78C8} = {6CC487A6-8357-4A1D-84EE-8723963AA596}
+		{360B7C4E-2A10-4AC4-B69B-DCC707758D2B} = {67BB8627-94EB-4807-80DD-3D466E1ACBE4}
+	EndGlobalSection
+EndGlobal
