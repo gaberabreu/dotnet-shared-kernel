@@ -1,5 +1,6 @@
 ﻿using Ardalis.Result;
 using FluentAssertions;
+using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -34,6 +35,24 @@ public class LoggingBehaviorTests
 
         // Assert
         result.Should().Be(response);
+        _nextMock.Verify(handler => handler(), Times.Once);
+    }
+
+    [Fact]
+    public async Task Handle_ShouldLogAndThrowExceptionWhenSomethingThrows()
+    {
+        // Arrange
+        var request = new SampleCommand(Guid.NewGuid());
+        var response = Result.Success(1);
+        var cancellationToken = new CancellationToken();
+
+        _nextMock.Setup(handler => handler()).ThrowsAsync(new ValidationException(string.Empty));
+
+        // Act
+        await _behavior.Invoking(y => y.Handle(request, _nextMock.Object, cancellationToken))
+            .Should().ThrowAsync<ValidationException>();
+
+        // Assert
         _nextMock.Verify(handler => handler(), Times.Once);
     }
 
